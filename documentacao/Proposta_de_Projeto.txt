@@ -15,22 +15,22 @@
  *     - localizacao: string (almoxarifado / setor)
  *     - dataCadastro: datetime
  *     - fabricante / numeroSerie: string
- *     - tipoIdentificacao: enum {RFID, DPM, BARRAS}
+ *     - tipoIdentificacao: enum {RFID, DPM(Direct Part Marking), BARRAS}
  *
  * - Gabarito : Ferramenta (especialização)
  *     - requerDocumentoAssociado: boolean (sempre true para gabaritos)
  *     - autorizacaoEngenheiro: codigoValidacao? / referenciaUsuario
  *     - dataUltimaCalibracao: date
- *     - frequenciaCalibracaoDias: int
+ *     - frequenciaCalibracaoMeses: int
  *
  * - Consumivel : Ferramenta (especialização)
  *     - quantidadeAtual: int
  *     - estoqueMinimo: int
- *     - unidadeMedida: string
+ *     
  *
  * - FerramentaDeMedicao : Ferramenta (categoria MEDICAO)
  *     - dataUltimaCalibracao: date
- *     - frequenciaCalibracaoDias: int
+ *     - frequenciaCalibracaoMeses: int
  *
  * - Funcionario
  *     - matricula: string (ou id)
@@ -38,7 +38,7 @@
  *     - setor: string
  *     - cargo: string
  *     - listaTreinamentos: set<string> (códigos/nomes de treinamentos)
- *     - permissoes: set<role> (CHEFE_FERRAMENTARIA, QUALIDADE, ENGENHEIRO, OPERADOR)
+ *     - permissoes: set<role> (CHEFE_FERRAMENTARIA, QUALIDADE, ENGENHEIRO, OPERADOR, CHEFE_SETOR)
  *
  * - Emprestimo (Movimentacao)
  *     - id: UUID
